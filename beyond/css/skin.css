@@ -1,0 +1,95 @@
+@font-face {
+    font-family: 'Product Sans';
+    src: local('Product Sans'), url('beyond\fonts\ProductSans-Regular.woff') format('woff');
+}
+
+body,
+html {
+    font-family: 'Product Sans';
+}
+
+.scrolly::-webkit-scrollbar {
+    display: none;
+}
+
+/* The hover effects for the text */
+.hovr {
+    position: relative;
+}
+
+.hovr::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    border-radius: 10px;
+    background: rgb(87, 79, 236);
+    bottom: 0;
+    left: 0;
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: transform 0.4s ease-in-out;
+}
+
+.hovr:hover::before {
+    transform-origin: left;
+    transform: scaleX(1);
+}
+
+/* hide navbar on scroll */
+
+
+
+/* magnetic button I */
+
+.btn {
+    transition: transform 0.3s ease;
+}
+
+/* Magnetic effect on hover */
+
+.my-button {
+    cursor: pointer;
+}
+
+.my-button:hover {
+    color: #fff;
+    background-color: #000;
+    transition: 0.8s background-color, 0.5s box-shadow;
+    box-shadow: 0px 2px 25px rgba(0, 0, 0, 0.5);
+}
+
+
+.follower {
+    width: 12px;
+    height: 12px;
+    z-index: 99;
+    background: rgb(2,0,36);
+    background: radial-gradient(circle, rgba(2,0,36,1) 0%, rgba(255,0,17,1) 0%, rgba(3,3,3,1) 100%);
+    border-radius: 50%;
+    position: fixed;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+}
+
+.heart{
+    color: #000;
+    transition: 0.5s;
+}
+
+.heart:hover{
+    color: rgb(224, 31, 31);
+    transition: 0.5s;
+    font-size: 70px;
+}
+
+.brand-img {
+    filter: grayscale(100%);
+    transform: scale(1);
+    transition: filter 0.7s ease-in, transform 0.4s ease-out;
+  }
+  
+  .brand-img:hover {
+    filter: grayscale(0%);
+    transform: scale(1.3);
+  }

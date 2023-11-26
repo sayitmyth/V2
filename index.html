@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="lofi" class="scrolly scroll-smooth">
+
+<head>
+    <!-- Document Metadata -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="The Further 1.0, SIT Kalburagi's Largest Fest.">
+    <meta name="keywords" content="further, thefurther, thefurther by sit">
+    <meta name="author" content="Sumit Hibare">
+
+    <!-- Favicon -->
+    <link rel="icon" href="beyond\images\logo.png" type="image/x-icon">
+    <link rel="apple-touch-icon" href="beyond\images\logo.png">
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="The Further By SIT">
+    <meta property="og:description" content="The Further 1.0, SIT Kalburagi's Largest Fest.">
+    <meta property="og:image" content="url-to-your-thumbnail-image.jpg">
+    <meta property="og:url" content="https://www.thefurther.in">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="en_US">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://www.thefurther.in">
+
+    <!-- The Stylesheets -->
+
+    <!-- Main Stylesheet (actual stylesheet) -->
+    <link rel="stylesheet" href="beyond\css\skin.css">
+
+    <!-- The CDN's -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.4.6/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="stylesheet" href="https://www.unpkg.com/shery-js@1.0.0-alpha.0.5/dist/Shery.css">
+    <link rel="stylesheet" href="https://unpkg.com/mouse-follower@1/dist/mouse-follower.min.css">
+
+    <title>Main | The Further</title>
+</head>
+
+<body>
+    <div class="hidden lg:flex follower z-[99]"></div>
+    <!-- Navbar Section -->
+
+    <header>
+
+        <!-- the pc navbar -->
+        <div class="navbar container mt-4 hidden lg:flex backdrop-blur-sm z-[90]" id="navigate">
+            <div class="navbar-start">
+                <a class="btn btn-ghost lg:text-2xl hover:bg-inherit text-xl lg:ml-10 hover:text-blue-600 hovr">
+                    <span class="rotate-180">/></span> the further />
+                    </the>
+                </a>
+            </div>
+            <div class="navbar-center hidden lg:flex dropdown dropdown-hover">
+                <ul class="menu menu-horizontal px-1 text-lg">
+                    <li><a class="hovr hover:bg-inherit hover:text-blue-600 navlinka">Main</a></li>
+                    <li><a class="hovr hover:bg-inherit hover:text-blue-600 navlinka">Events</a></li>
+                    <li><a class="hovr hover:bg-inherit hover:text-blue-600 navlinka">Accommodation</a></li>
+                    <li><a class="hovr hover:bg-inherit hover:text-blue-600 navlinka">Team</a></li>
+                    <li><a class="hovr hover:bg-inherit hover:text-blue-600 navlinka">Reach</a></li>
+                    <li><a class="hovr hover:bg-inherit hover:text-blue-600">Gallery</a></li>
+                </ul>
+            </div>
+            <div class="navbar-end">
+                <button class="btn btn-circle btn-ghost hover:bg-black lg:mr-10 magnetic my-button"
+                    onclick="heart_online.showModal()">
+                    <i class="fa-solid fa-heart fa-xl heart"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- the mobile navbar -->
+        <div class="navbar container mt-4 lg:hidden fixed z-[99]">
+            <div class="navbar-start">
+                <a class="btn btn-ghost text-3xl hover:bg-inherit text-inherit font-medium">
+                    <span class="rotate-180">/></span> the further />
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- the drawer menu -->
+    <div class="fixed top-5 right-4 lg:hidden z-[99]">
+        <label for="my-drawer-4" class="drawer-button btn btn-primary btn-circle lg:hidden"><svg
+                xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h7" />
+            </svg></label>
+    </div>
+
+    <div class="drawer drawer-end">
+        <input id="my-drawer-4" type="checkbox" class="drawer-toggle" />
+        <div class="drawer-content">
+
+        </div>
+        <div class="drawer-side z-[90]">
+            <label for="my-drawer-4" aria-label="close sidebar" class="drawer-overlay"></label>
+            <ul class="menu p-4 w-full min-h-full bg-base-200 text-base-content">
+                <li><a class="mt-40 text-gray-500">MENU</a></li>
+                <li><a class="hovr text-4xl ml-4 mt-5 text-gray-700">Main</a></li>
+                <li><a class="hovr text-4xl ml-4 text-gray-700">Events</a></li>
+                <li><a class="hovr text-4xl ml-4 text-gray-700">Accommodation</a></li>
+                <li><a class="hovr text-4xl ml-4 text-gray-700">Team</a></li>
+                <li><a class="hovr text-4xl ml-4 text-gray-700">Reach</a></li>
+                <li><a class="hovr text-4xl ml-4 text-gray-700">Gallery</a></li>
+                <li><a class="mt-5 text-gray-500">Get in Touch</a></li>
+                <li><a class="text-gray-700" style="margin-top: -12px;">theforeverfella@gmail.com</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- end of drawer menu -->
+
+    <!-- the modal for social -->
+
+    <dialog id="heart_online" class="modal">
+        <div class="modal-box bg-black rounded-2xl bg-gradient-to-b from-red-700/[.40] via-transparent">
+
+            <!-- Modal header -->
+            <div class="flex items-center justify-between p-4 md:p-5 border-b rounded-t">
+                <h3 class="text-lg font-medium text-blue-200">
+                    Join us on social media
+                </h3>
+
+                <form method="dialog">
+                    <button
+                        class="btn btn-xl btn-circle btn-ghost absolute right-4 top-8 text-blue-200 font-bold bg-transparent hover:bg-red-300 hover:text-black rounded-full text-lg h-8 w-8 ms-auto inline-flex justify-center items-center magnetic my-button">✕</button>
+                </form>
+            </div>
+            <!-- Modal body -->
+            <div class="p-4 md:p-5">
+                <ul class="space-y-4 mb-4">
+                    <li>
+                        <input type="radio" id="job-1" name="job" value="job-1" class="hidden peer" required>
+                        <label for="job-1"
+                            class="inline-flex items-center justify-between w-full p-5 text-gray-900 bg-white rounded-lg cursor-pointer"
+                            style="background: url(https://cdn.dribbble.com/users/478912/screenshots/4172267/instagram.gif); background-size: cover;">
+                            <div class="block">
+                                <div class="w-full text-lg font-semibold">@the_further_by_sit</div>
+                                <div class="w-full font-semibold">instagram</div>
+                            </div>
+                            <svg class="w-4 h-4 ms-3 rtl:rotate-180 text-black" aria-hidden="true"
+                                xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                    stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9" />
+                            </svg>
+                        </label>
+                    </li>
+                    <li>
+                        <input type="radio" id="job-2" name="job" value="job-2" class="hidden peer">
+                        <label for="job-2"
+                            class="inline-flex items-center justify-between w-full p-5 text-gray-900 rounded-lg cursor-pointer"
+                            style="background: url(https://digitalsynopsis.com/wp-content/uploads/2017/07/beautiful-color-ui-gradients-backgrounds-cherry.png); background-size: cover;">
+                            <div class="block">
+                                <div class="w-full text-lg font-semibold">sithackathon23@gmail.com</div>
+                                <div class="w-full font-semibold">Email us</div>
+                            </div>
+                            <svg class="w-4 h-4 ms-3 rtl:rotate-180 text-black" aria-hidden="true"
+                                xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                    stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9" />
+                            </svg>
+                        </label>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+        </div>
+        </div>
+        <form method="dialog" class="modal-backdrop">
+            <button>close</button>
+        </form>
+    </dialog>
+
+    <!-- the end of modal for social -->
+
+    <!-- Main Content Section -->
+    <main id="MainContent">
+
+        <!-- Hero -->
+        <div class="hero h-screen bg-black bg-gradient-to-t from-red-700/[.22] via-transparent">
+
+            <div class="max-w-[85rem] mx-auto px-4 sm:px-6 lg:px-8 py-24 space-y-8">
+                <!-- logo Banner -->
+                <div class="flex justify-center">
+                    <img src="beyond\images\logo.png" class="h-20" style="margin-top: 55px;">
+                    <div class="w-7 h-7 mt-10 text-blue-300 hover:text-purple-400 transition-colors duration-300"
+                        style="margin-top: 90px;">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="3.5"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                    </div>
+                    <img src="https://sitgulbarga.org/wp-content/uploads/2021/10/WhatsApp-Image-2021-06-21-at-10.32.23-AM-removebg.png"
+                        class="w-16 sm:w-24 lg:mt-14 mt-16">
+                </div>
+                <!-- End logo Banner -->
+
+                <!-- Title -->
+                <div class="lg:max-w-4xl text-center mx-auto">
+                    <h1 class="block font-medium text-gray-200 text-4xl sm:text-5xl md:text-6xl lg:text-7xl">
+                        explore <span class="hover:text-red-300 duration-300">
+                            the further />
+                        </span>
+                    </h1>
+                </div>
+
+                <!-- End Title -->
+
+                <div class="max-w-3xl text-center mx-auto">
+                    <p class="text-lg text-gray-400">where creativity meets talent to compete among the <a href=""
+                            class="typewrite" data-period="2000"
+                            data-type='[ "legends", "Engineers", "Artist", "Students" ]'>
+                            <span class="wrap"></span>
+                        </a></p>
+                </div>
+                <!-- Buttons -->
+                <div class="text-center">
+                    <a class="inline-flex justify-center items-center gap-x-3 text-center shadow-lg shadow-transparent shadow-red-700/50 border text-sm font-medium rounded-full py-3 px-6 magnetic my-button text-red-300 border-red-300 hover:text-green-300 hover:border-green-300 hover:duration-300 border-2"
+                        href="#">
+                        Get started
+                        <svg class="flex-shrink-0 w-4 h-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <path d="m9 18 6-6-6-6" />
+                        </svg>
+                    </a>
+                </div>
+
+                <!-- End Buttons -->
+            </div>
+
+        </div>
+
+        <!-- End Hero -->
+    </main>
+
+    <!-- the start of about area -->
+
+
+    <div class="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56 hero" style="cursor: help;">
+        <div class="text-center">
+            <h1 class="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">About</h1>
+            <p class="mt-6 text-lg leading-8 text-gray-600">Hello There, welcome to <span class="text-blue-600">The
+                    Further</span>, we are the students of SIT Further is not just an event, it's a passion-driven
+                initiative. We weave together creativity and competition, crafting experiences that reflect the
+                dynamic spirit of our student community. Join us as we redefine events at SIT, fostering connections
+                and unleashing the potential within.</p>
+        </div>
+    </div>
+
+
+
+    <!-- the end of about area -->
+
+    <!-- The brands area -->
+
+    <div class="py-20 sm:py-20 bg-black bg-gradient-to-b from-red-700/[.20] via-transparent">
+        <div class="mx-auto max-w-8xl px-6 lg:px-8 items-center">
+            <h2 class="text-center text-xl font-medium leading-8 text-white hover:text-red-300 duration-300"
+                style="font-family:product sans;">
+                Powered By</h2>
+            <hr class="w-14 m-auto mt-2">
+            <div
+                class="mx-auto mt-10 grid max-w-lg lg:grid-cols-4 lg:gap-x-8 lg:gap-y-10 sm:max-w-xl sm:grid-cols-6 sm:gap-x-10 lg:mx-0 lg:max-w-none lg:grid-cols-5 lg:ml-10 flex flex-wrap items-center justify-center">
+                <img class="col-span-2 object-contain lg:col-span-1 h-40 w-40 brand-img"
+                    src="https://sitgulbarga.org/wp-content/uploads/2021/10/WhatsApp-Image-2021-06-21-at-10.32.23-AM-removebg.png">
+                <img class="col-span-2 object-contain lg:col-span-1 h-40 w-40 brand-img"
+                    src="https://shettygroupofinstitutions.org/wp-content/uploads/2022/07/SGi-Logo-512x512_PNG-2.png">
+                <img class="col-span-2 object-contain lg:col-span-1 h-40 w-40 brand-img"
+                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/IEEE_logo.svg/1200px-IEEE_logo.svg.png">
+                <img class="col-span-2 object-contain sm:col-start-2 lg:col-span-1 h-40 w-40 brand-img"
+                    src="https://www.comedkares.org/wp-content/uploads/2023/04/Comedkares-Logo-EPS.png">
+                <img class="col-span-2 object-contain sm:col-start-2 lg:col-span-1 h-40 w-40 brand-img"
+                    src="https://be-practical.com/images/Be-logo.png">
+
+            </div>
+        </div>
+    </div>
+
+    <div class="py-20 sm:py-20 bg-black">
+        <div class="mx-auto max-w-8xl px-6 lg:px-8 items-center">
+            <h2 class="text-center text-xl font-medium leading-8 text-white hover:text-red-300 duration-300"
+                style="font-family:product sans;">
+                Brought To You By</h2>
+            <hr class="w-28 m-auto mt-2">
+            <div class="mx-auto mt-10 grid items-center justify-center">
+                <img class="col-span-2 object-contain sm:col-start-2 lg:col-span-1 h-40 w-40 brand-img"
+                    src="beyond\brands\tic.png">
+
+            </div>
+        </div>
+
+    </div>
+
+
+    <!-- the end of brands area -->
+
+    <!-- the maps area -->
+    <div class="py-20 bg-black bg-gradient-to-t from-red-700/[.17] via-transparent">
+        <h2 class="text-center text-xl font-medium leading-8 text-white hover:text-red-300 duration-300"
+            style="font-family:product sans;">
+            Locate Shetty Institute Of Technology</h2>
+        <hr class="w-14 m-auto mt-2">
+        <iframe class="mt-10 relative max-w-7xl mx-auto mb-10 rounded-3xl w-11/12"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3809.567338428934!2d76.86642417491748!3d17.288154705656755!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc8eed18134dfdb%3A0xe9c44020d109ad0c!2sShetty%20Institute%20of%20Technology!5e0!3m2!1sen!2sin!4v1700216569072!5m2!1sen!2sin"
+            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+    <!-- the end of maps -->
+
+    <!-- the footer area -->
+
+    <!-- component -->
+    <div class="w-full min-h-screen flex items-center justify-center bg-black relative">
+        <div class="absolute end-5 top-24 lg:top-16 lg:end-16">
+            <a class="inline-block rounded-full bg-blue-500 p-2 text-white shadow transition hover:text-red-300 duration-300 hover:bg-black hover:border-2 hover:border-red-300 sm:p-3 lg:p-4 magnetic my-button"
+                href="#MainContent">
+                <span class="sr-only">Top</span>
+
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                    <path fill-rule="evenodd"
+                        d="M14.707 12.707a1 1 0 01-1.414 0L10 9.414l-3.293 3.293a1 1 0 01-1.414-1.414l4-4a1 1 0 011.414 0l4 4a1 1 0 010 1.414z"
+                        clip-rule="evenodd" />
+                </svg>
+            </a>
+        </div>
+        <div class="md:w-2/3 w-full px-4 text-white flex flex-col">
+            <div class="w-full text-7xl font-bold">
+                <h1 class="w-full md:w-2/3">Do you have any issues ? get
+                    in touch.</h1>
+            </div>
+            <div class="flex mt-8 flex-col md:flex-row md:justify-between">
+                <p class="w-full md:w-2/3 text-gray-400">contact us regarding any issues with website, registeration,
+                    competitions & content. we will get in touch with you immediately</p>
+                <div class="w-44 pt-6 md:pt-0">
+                    <a
+                        class="justify-center text-center rounded-full shadow px-10 py-3 flex items-center magnetic my-button text-red-300 border-2 border-red-300 hover:border-green-300 duration-300 hover:text-green-300">Contact
+                        US</a>
+                </div>
+            </div>
+            <div class="flex mt-16 flex-col md:flex-row md:justify-between" style="cursor: pointer;">
+                <div class="lg:text-3xl text-xl lg:ml-5">
+                    Quick Links
+                </div>
+                <div class="lg:text-2xl text-lg flex flex-row space-x-8 items-center justify-end">
+                    <a href="https://maps.app.goo.gl/1vsYGQXJi3ysTxoYA" class="hover:text-red-300 brand-img"
+                        target="_blank">map/></a>
+                    <a class="hover:text-red-300 brand-img" target="_blank">become a sponsor/></a>
+                </div>
+
+            </div>
+            <div class="flex flex-col">
+                <div class="flex mt-16 mb-12 flex-row justify-between">
+                    <div>
+                        <h1 class="lg:text-4xl text-2xl">
+                            < The Further />
+                        </h1>
+                    </div>
+
+                    <div class="flex space-x-8 items-center justify-between">
+                        <ul class="flex justify-center gap-6 sm:justify-end inline-flex">
+                            <li class="brand-img duration-300">
+                                <a href="https://www.instagram.com/thefurther_by_sit/" rel="noreferrer" target="_blank"
+                                    class="text-teal-700 transition hover:text-teal-700/75">
+                                    <span class="sr-only">Instagram</span>
+                                    <img src="https://i.pinimg.com/originals/6a/12/c9/6a12c9813b2c41582357005e60f16df4.png"
+                                        width="50" height="50">
+                                </a>
+                            </li>
+                            <li class="brand-img duration-300">
+                                <a href="mailto:sithackathon23@gmail.com" rel="noreferrer"
+                                    class="text-teal-700 transition hover:text-teal-700/75 brand-img duration-300">
+                                    <span class="sr-only">Gmail</span>
+                                    <img src="https://freelogopng.com/images/all_img/1657906383gmail-icon-png.png"
+                                        height="50" width="50">
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <hr class="border-red-600" />
+                <p class="w-full text-center my-12 text-black">A Design & Developed By Sumit Hibare</p>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <!-- JavaScript -->
+    <script defer src="beyond\js\app.js"></script>
+
+    <!-- Structured Data - JSON-LD format -->
+    <script type="application/ld+json">
+        {
+            "@context": "https://thefurther.in",
+            "@type": "WebPage",
+            "name": "the further",
+            "description": "The Further 1.0, SIT Kalburagi's Largest Fest.",
+            "url": "https://www.thefurther.in"
+        }
+    </script>
+
+    <script src="https://kit.fontawesome.com/399e59f5b2.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://unpkg.co/gsap@3/dist/gsap.min.js"></script>
+
+</body>
+
+</html>
